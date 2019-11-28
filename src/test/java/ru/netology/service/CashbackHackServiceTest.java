@@ -30,4 +30,10 @@ class CashbackHackServiceTest {
         int expected =999;
         assertEquals(expected,actual);
     }
+    @Test
+    void shouldReturnIllegalArgumentExceptionIfAmountIs0OrLess() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
+        int amount = 0;
+        assertThrows(IllegalArgumentException.class, () -> cashbackHackService.remain(amount));
+    }
 }

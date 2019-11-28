@@ -1,0 +1,4 @@
+amount,expected,message
+999,1,should return 1 if amount is  999
+1000,0,should return 0 if amount is 1000
+1001,999,should return 999 if amount is 1001
